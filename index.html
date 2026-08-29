@@ -22,6 +22,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#formacao">Formação</a>
+        <a href="#certificados">Certificados</a>
         <a href="#projetos">Projetos</a>
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
@@ -94,9 +95,9 @@
           <article class="skill-card"><i class="fa-solid fa-database"></i><span>PostgreSQL</span></article>
           <article class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></article>
           <article class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></article>
-          <article class="skill-card"><i class="fa-brands fa-excel"></i><span>Excel</span></article>
-          <article class="skill-card"><i class="fa-brands fa-word"></i><span>Word</span></article>
-          <article class="skill-card"><i class="fa-brands fa-power-point"></i><span>PowerPoint</span></article>
+          <article class="skill-card"><i class="fa-solid fa-file-word"></i><span>Word</span></article>
+          <article class="skill-card"><i class="fa-solid fa-file-excel"></i><span>Excel</span></article>
+          <article class="skill-card"><i class="fa-solid fa-file-powerpoint"></i><span>PowerPoint</span></article>
         </div>
       </div>
     </section>
@@ -143,81 +144,120 @@
       </div>
     </section>
 
-    <section class="section" id="projetos">
-  <div class="container">
-    <h2>Projetos</h2>
-    <p class="section-text">
-      Alguns projetos em programação que já concluí e outros que estão em desenvolvimento.
-    </p>
+    <section class="section" id="certificados">
+      <div class="container">
+        <h2>Certificados</h2>
+        <p class="section-text">
+          Certificados e participações em cursos, treinamentos e eventos.
+        </p>
 
-    <div class="projects-grid">
-      <a class="project-card" href="https://catalogo-vendas-beta.vercel.app" target="_blank" rel="noreferrer">
-        <div class="project-image">
-          <img src="assets/projeto1.png" alt="Catálogo de Vendas de Pré Moldados">
-        </div>
-        <div class="project-content">
-          <h3>Catálogo de Vendas de Pré Moldados</h3>
-          <p>
-            Aplicação criada para apresentação de produtos, com foco em navegação intuitiva,
-            visual profissional e experiência responsiva para destacar o catálogo de forma clara e organizada.
-          </p>
-        </div>
-      </a>
+        <div class="certificados-grid">
+          <button class="certificado-card" data-pdf="assets/certificado1.pdf">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Nome do Certificado 1</span>
+          </button>
 
-      <a class="project-card" href="https://card-user-theta.vercel.app" target="_blank" rel="noreferrer">
-        <div class="project-image">
-          <img src="assets/projeto2.png" alt="Dashboard de Usuário">
-        </div>
-        <div class="project-content">
-          <h3>Dashboard de Usuário</h3>
-          <p>
-            Interface desenvolvida para visualização e replicação de tela, com foco em organização,
-            estrutura visual moderna e construção de componentes alinhados ao layout proposto.
-          </p>
-        </div>
-      </a>
+          <button class="certificado-card" data-pdf="assets/certificado2.pdf">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Nome do Certificado 2</span>
+          </button>
 
-      <a class="project-card" href="https://vendas-pudim.vercel.app" target="_blank" rel="noreferrer">
-        <div class="project-image">
-          <img src="assets/projeto3.png" alt="Vendas de Pudim">
-        </div>
-        <div class="project-content">
-          <h3>Vendas de Pudim</h3>
-          <p>
-            Projeto funcional com layout responsivo, ideal para divulgação de produto e vendas,
-            priorizando clareza, estética agradável e facilidade de uso em diferentes dispositivos.
-          </p>
-        </div>
-      </a>
+          <button class="certificado-card" data-pdf="assets/certificado3.pdf">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Nome do Certificado 3</span>
+          </button>
 
-      <a class="project-card" href="https://finances-system.vercel.app" target="_blank" rel="noreferrer";">
-        <div class="project-image">
-          <img src="assets/projeto4.png" alt="Sistema Financeiro">
+          <button class="certificado-card" data-pdf="assets/certificado4.pdf">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Nome do Certificado 4</span>
+          </button>
         </div>
-        <div class="project-content">
-          <h3>Sistema Finenceiro</h3>
-          <p>
-            Sistema de gerenciamento de vendas, gastos e lucros para pequenas empresas, com foco em controle
-            financeiro, organização de dados e apoio à tomada de decisão.
-          </p>
-        </div>
-      </a>
+      </div>
+    </section>
 
-      <a class="project-card" href="#" onclick="return false;">
-        <div class="project-image">
-          <img src="assets/manutencao.jfif" alt="Em desenvolvimento">
-        </div>
-        <div class="project-content">
-          <h3>Em desenvolvimento...</h3>
-          <p>
-            Projeto em andamento com foco em evolução técnica, aplicação prática dos conhecimentos e construção
-            de uma solução mais robusta para portfólio profissional.
-          </p>
-        </div>
-      </a>
+    <!-- Modal para PDF -->
+    <div class="modal" id="pdfModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+      </div>
     </div>
-  </div>
-</section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <p class="section-text">
+          Alguns projetos em programação que já concluí e outros que estão em desenvolvimento.
+        </p>
+
+        <div class="projects-grid">
+          <a class="project-card" href="https://catalogo-vendas-beta.vercel.app" target="_blank" rel="noreferrer">
+            <div class="project-image">
+              <img src="assets/projeto1.png" alt="Catálogo de Vendas de Pré Moldados">
+            </div>
+            <div class="project-content">
+              <h3>Catálogo de Vendas de Pré Moldados</h3>
+              <p>
+                Aplicação criada para apresentação de produtos, com foco em navegação intuitiva,
+                visual profissional e experiência responsiva para destacar o catálogo de forma clara e organizada.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://card-user-theta.vercel.app" target="_blank" rel="noreferrer">
+            <div class="project-image">
+              <img src="assets/projeto2.png" alt="Dashboard de Usuário">
+            </div>
+            <div class="project-content">
+              <h3>Dashboard de Usuário</h3>
+              <p>
+                Interface desenvolvida para visualização e replicação de tela, com foco em organização,
+                estrutura visual moderna e construção de componentes alinhados ao layout proposto.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://vendas-pudim.vercel.app" target="_blank" rel="noreferrer">
+            <div class="project-image">
+              <img src="assets/projeto3.png" alt="Vendas de Pudim">
+            </div>
+            <div class="project-content">
+              <h3>Vendas de Pudim</h3>
+              <p>
+                Projeto funcional com layout responsivo, ideal para divulgação de produto e vendas,
+                priorizando clareza, estética agradável e facilidade de uso em diferentes dispositivos.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://finances-system.vercel.app" target="_blank" rel="noreferrer">
+            <div class="project-image">
+              <img src="assets/projeto4.png" alt="Sistema Financeiro">
+            </div>
+            <div class="project-content">
+              <h3>Sistema Financeiro</h3>
+              <p>
+                Sistema de gerenciamento de vendas, gastos e lucros para pequenas empresas, com foco em controle
+                financeiro, organização de dados e apoio à tomada de decisão.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="#" onclick="return false;">
+            <div class="project-image">
+              <img src="assets/manutencao.jfif" alt="Em desenvolvimento">
+            </div>
+            <div class="project-content">
+              <h3>Em desenvolvimento...</h3>
+              <p>
+                Projeto em andamento com foco em evolução técnica, aplicação prática dos conhecimentos e construção
+                de uma solução mais robusta para portfólio profissional.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="experiencia">
       <div class="container">
@@ -262,8 +302,7 @@
           <a class="contact-card" href="https://wa.me/5562994688926" target="_blank" rel="noreferrer">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
-        </a>
-          
+          </a>
         </div>
       </div>
     </section>
